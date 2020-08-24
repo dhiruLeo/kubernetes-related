@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: indica-sativa-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /sativa
+          backend:
+            serviceName:  sativa-svc
+            servicePort: 5678
+        - path: /indica
+          backend:
+            serviceName:  indica-svc
+            servicePort: 5678
+
+

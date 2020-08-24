@@ -1,0 +1,29 @@
+#5.Take the etcd backup and copy to specified path and etcd bootstrapping (ca certificate set in Etcd service file, and restart) make sure We need to know All parameters in ETCD service file
+
+
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: etcd-backup
+spec:
+  schedule: "*/30 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: etcd-backup
+            image: lachlanevenson/k8s-kubectl
+            command:
+            - /bin/sh
+            - "-ec"
+            - |
+              sed -e "s|<NOW>|$(date '+%Y-%m-%d_%H:%M:%S')|g" /var/etcd_backup/backup_cr.yaml | kubectl create -f -
+            volumeMounts:
+            - name: backup-config
+              mountPath: /var/etcd_backup
+          restartPolicy: OnFailure
+          volumes:
+          - name: backup-config
+            configMap:
+              name: backup-config

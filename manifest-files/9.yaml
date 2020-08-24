@@ -1,0 +1,17 @@
+
+#9.Create Nginx Pod with specified Labels and Pod should schedule on Specific node.
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    disktype: ssd

@@ -1,0 +1,41 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: test-user           #Service Account Name for Users to assign role
+  namespace: deve
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: test-user2           #Service Account Name for Users to assign role
+  namespace: deve
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: deve
+  name: pod-reader                  #Role Name 
+rules:
+- apiGroups: [""]                    # "" indicates the core API group
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: pod-reader-binding           #RoleBinding Name
+  namespace: deve
+subjects:
+- kind: ServiceAccount
+  name: test-user
+  namespace: deve
+- kind: ServiceAccount
+  name: test-user2
+  namespace: deve  
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io

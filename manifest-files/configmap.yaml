@@ -1,0 +1,21 @@
+
+
+#5.Take the etcd backup and copy to specified path and etcd bootstrapping (ca certificate set in Etcd service file, and restart) make sure We need to know All parameters in ETCD service file
+
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backup-config
+data:
+  backup_cr.yaml: |
+    apiVersion: "etcd.database.coreos.com/v1beta2"
+    kind: "EtcdBackup"
+    metadata:
+      generateName: example-etcd-backup-
+    spec:
+      etcdEndpoints: ["http://example-etcd-cluster-client:2379"]
+      storageType: S3
+      s3:
+        path: mybucket/etcd.backup.<NOW>
+        awsSecret: aws

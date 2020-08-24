@@ -1,0 +1,45 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  #namespace: deve
+  name: pod-reader                  #Role Name 
+rules:
+- apiGroups: ["*"]
+  resources: ["services", "deployments", "replicasets", "pods", "replicationcontrollers", "namesapces", "nodes", "daemonsets", "pods/log"]
+  verbs: ["get", "list", "watch"]
+
+# - apiGroups: [""]                    # "" indicates the core API group
+#   resources: ["pods", "pods/log"]
+#   verbs: ["get", "watch", "list"]
+
+# - apiGroups: ["extensions", "apps"]
+#   resources: ["deployments"]
+#   verbs: ["get", "list", "watch", "create"]
+
+# - apiGroups: [""] # "" indicates the core API group
+#   resources: ["configmaps", "secrets"]
+#   verbs: ["get", "list", "watch", "create"] 
+#  # verbs: ["get", "list", "watch", "create", "delete", "update", "patch"]  
+
+# - nonResourceURLs: ["/healthz", "/healthz/*"] # '*' in a nonResourceURL is a suffix glob match
+#   verbs: ["get", "post"]
+
+# - apiGroups: [""]
+#   resources: ["nodes"]
+#   verbs: ["get", "list", "watch"]    
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: pod-reader-binding
+subjects:
+- kind: Group
+  name: Newbie # Name is case sensitive
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io

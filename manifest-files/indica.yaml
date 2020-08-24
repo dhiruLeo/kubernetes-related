@@ -1,0 +1,25 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: indica-app
+  labels:
+    app: indica
+spec:
+  containers:
+    - name: indica-app
+      image: hashicorp/http-echo
+      args:
+        - "-text=This is Indica"
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: indica-svc
+spec:
+  selector:
+    app: indica
+  ports:
+  - port: 5678 # Default port for image
+
