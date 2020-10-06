@@ -31,3 +31,20 @@ spec:
     }
   }
 }
+
+
+
+1.What is difference between NACL & Security Group?
+2. What is difference between NAT instance & NAT Gateway?
+3.What Type of Traffic does NAT GAteway allows?
+4. What does terraform init does?
+5. What is the  use terraform state files?
+6. What is use of count and interpolation in terraform?
+7.What are k8s master components and their use?
+8. Can we deploy a pod to specific node? Yes
+9. How to allow  pod  A to access  pod B , only accessible to POD A? Using pod network policy.
+10. Difference between Configmap & Secret?
+11. Can we pass env variables to a pod using Configmap & Secret? Yes 
+12. Where to define env variables in deployment yaml file?
+13. Pod affinity & Pod life cycle?
+
