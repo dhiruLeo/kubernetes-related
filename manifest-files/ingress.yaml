@@ -1,20 +1,54 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: indica-sativa-ingress
-  annotations:
-    ingress.kubernetes.io/rewrite-target: /
+  name: virtual-ingress
 spec:
+  tls:
+  - hosts:
+      - web.devops.empirix.com   #hello-world.info
+    secretName: tls-auth
   rules:
-  - http:
+  - host: web.devops.empirix.com
+    http:
       paths:
-        - path: /sativa
-          backend:
-            serviceName:  sativa-svc
-            servicePort: 5678
-        - path: /indica
-          backend:
-            serviceName:  indica-svc
-            servicePort: 5678
-
-
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins
+            port:
+              number: 8080
+      - path: /v1
+        pathType: Prefix
+        backend:
+          service:
+            name: web
+            port:
+              number: 8080        
+      - path: /v2
+        pathType: Prefix
+        backend:
+          service:
+            name: web2
+            port:
+              number: 8080
+  - host: "jenkins.devops.empirix.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: minio
+            port:
+              number: 9000
+  - host: "sonarqube.devops.empirix.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: grafana
+            port:
+              number: 80            
