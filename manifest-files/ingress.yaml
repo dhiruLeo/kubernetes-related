@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
   - hosts:
-      - web.devops.empirix.com   #hello-world.info
+      - web.devops.com   #hello-world.info
     secretName: tls-auth
   rules:
-  - host: web.devops.empirix.com
+  - host: web.devops.com
     http:
       paths:
       - path: "/"
@@ -32,7 +32,7 @@ spec:
             name: web2
             port:
               number: 8080
-  - host: "jenkins.devops.empirix.com"
+  - host: "jenkins.devops.com"
     http:
       paths:
       - pathType: Prefix
@@ -42,7 +42,7 @@ spec:
             name: minio
             port:
               number: 9000
-  - host: "sonarqube.devops.empirix.com"
+  - host: "sonarqube.devops.com"
     http:
       paths:
       - pathType: Prefix
