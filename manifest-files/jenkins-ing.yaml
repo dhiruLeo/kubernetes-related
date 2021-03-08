@@ -1,0 +1,95 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: virtual-ingress
+spec:
+  tls:
+  - hosts:
+      - web.devops.com   #hello-world.info
+    secretName: tls-auth
+  rules:
+  - host: web.devops.com
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: grafana
+            port:
+              number: 80     
+      - path: /v1
+        pathType: Prefix
+        backend:
+          service:
+            name: web
+            port:
+              number: 8080        
+      - path: /v2
+        pathType: Prefix
+        backend:
+          service:
+            name: web2
+            port:
+              number: 8080
+              
+#      - path: "/grafana"
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: grafana
+#            port:
+#              number: 80          
+#  - host: "jenkins.devops.com"
+#    http:
+#      paths:
+#      - pathType: Prefix
+#        path: "/"
+#        backend:
+#          service:
+#            name: jenkins
+#            port:
+#              number: 80
+#  - host: "sonarqube.devops.com"
+#    http:
+#      paths:
+#      - pathType: Prefix
+#        path: "/minio"
+#        backend:
+#          service:
+#            name: minio
+#            port:
+#              number: 9000            
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-host
+spec:
+#  tls:
+#  - hosts:
+#      - "*.devops.com"   #hello-world.info
+#    secretName: tls-auth
+  rules:
+  - host: "sonarqube.devops.com"
+    http:
+      paths:
+      - path: "/minio"
+        pathType: Prefix
+        backend:
+          service:
+            name: minio
+            port:
+              number: 9000
+  - host: "jenkins.devops.com"
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix  
+        backend:
+          service:
+            name: jenkins
+            port:
+              number: 80
+  
