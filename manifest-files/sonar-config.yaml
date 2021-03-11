@@ -1,0 +1,31 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sonar-extensions
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sonar-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+      
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sonarqube-mysql-secret
+type: Opaque
+data:
+  password: Vk83RnZucGdoZw== #VO7Fvnpghg             
