@@ -10,3 +10,15 @@ spec:
       nodePort: 31032
   selector:
     app: jenkins
+---
+ apiVersion: v1  
+ kind: PersistentVolumeClaim  
+ metadata:  
+  name: jenkins-pv-claim  
+ spec:  
+  storageClassName: longhorn
+  accessModes:  
+   - ReadWriteOnce  
+  resources:  
+   requests:  
+    storage: 5Gi 
