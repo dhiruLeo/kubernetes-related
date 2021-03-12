@@ -32,34 +32,6 @@ spec:
             name: web2
             port:
               number: 8080
-              
-#      - path: "/grafana"
-#        pathType: Prefix
-#        backend:
-#          service:
-#            name: grafana
-#            port:
-#              number: 80          
-#  - host: "jenkins.devops.com"
-#    http:
-#      paths:
-#      - pathType: Prefix
-#        path: "/"
-#        backend:
-#          service:
-#            name: jenkins
-#            port:
-#              number: 80
-#  - host: "sonarqube.devops.com"
-#    http:
-#      paths:
-#      - pathType: Prefix
-#        path: "/minio"
-#        backend:
-#          service:
-#            name: minio
-#            port:
-#              number: 9000            
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -75,11 +47,11 @@ spec:
   - host: "sonarqube.devops.com"
     http:
       paths:
-      - path: "/minio"
+      - path: "/"
         pathType: Prefix
         backend:
           service:
-            name: minio
+            name: sonarqube
             port:
               number: 9000
   - host: "jenkins.devops.com"
@@ -92,4 +64,14 @@ spec:
             name: jenkins
             port:
               number: 80
+  - host: "sonarqube.devops.com"
+    http:
+      paths:
+      - path: "/minio"
+        pathType: Prefix
+        backend:
+          service:
+            name: minio
+            port:
+              number: 9000            
   
