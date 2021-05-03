@@ -40,6 +40,8 @@
 
 `18. Diff. between PV & PVC?. `
 
+`19. what is terraform state file & terraform lock ?. `
+
 # Basic Commands 
 
 ### 1. pwd:- 
