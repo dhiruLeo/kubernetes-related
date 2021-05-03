@@ -34,9 +34,11 @@
 
 `15. Difference Between ADD & COPY , CMD & ENTRYPOINT . Can we override entrypoint as well ? Yes We can using docker run imagename --entrypoint flag . `
 
-`16. Difference between Pod, statefulset & Deployment.`
+`16. Difference between Pod, Statefulset & Deployment.`
 
 `17. 3 master node in Kubernetes ? what if 2 goes down what will happen.`
+
+`18. Diff. between PV & PVC?. `
 
 # Basic Commands 
 
