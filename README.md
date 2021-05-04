@@ -45,7 +45,7 @@
 
 `20. Can I rollback a node upgrade? `
 
-`21. Diff. between security group and NACL?`
+`21.  What does serverless mean to you ?. `
 
 `22. What is continuous Integration? `
 
@@ -95,7 +95,7 @@
 
 `54. Tell me about a time when you took on something significant outside your area of responsibility and why was that important ?. `
 
-`55. What does serverless mean to you ?. `
+`55. `
 
 # Basic Commands 
 
