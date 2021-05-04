@@ -4,6 +4,7 @@
 
 ---------------------------------------------------------------------------------------
 
+
 `1.What is difference between NACL & Security Group? `
 
 `2. What is difference between NAT instance & NAT Gateway? `
@@ -41,6 +42,60 @@
 `18. Diff. between PV & PVC?. `
 
 `19. what is terraform state file & terraform lock ?. `
+
+`20. Can I rollback a node upgrade? `
+
+`21. Diff. between security group and NACL?`
+
+`22. What is continuous Integration? `
+
+`23. What is CIDR? `
+
+`24. What is init container? Why do we need it ?. `
+
+`25. Pod restart policies available ?. `
+
+`26. What is the use of replica set ?. `
+
+`27. What are the different storage classes ?. `
+
+`28. Diff types of EC2 instances ?. `
+
+`29. Is it possible to edit the specifications of existing pod for modifying the resource limits ?. `
+
+`30. What are the different types of secrets available in Kubernetes ?. `
+
+`31. What are the different ways you can apply probes, (liveness or readiness) for a container ?. `
+
+`32. How do you change the priority of a running process ?. `
+
+`33. Different taint effects ?.`
+
+`34. Suppose I have three nodes, one of the, I have labelled as LARGE and I want my data processing pod to go on the node which is labelled as LARGE what should be done ?. `
+
+`35. How does Terraform load all the plugins ?. `
+
+`36. What is VPC peering ?. `
+
+`37. What is null resource in Terraform ?. `
+
+`38. What is the difference between provider and provisioner in Terraform ?. `
+
+`39. What are the different networks in Docker ?. `
+
+`40. What does docker run --network=none nginx do ?. `
+ 
+`50. Different storage classes in AWS ?. `
+
+`51. What is the difference between scaling and autoscaling ?. `
+
+`52. What is K8S object that helps in autoscaling ?. `
+
+`53. Diff. between fault tolerance and Disaster recovery ?. `
+
+`54. Tell me about a time when you took on something significant outside your area of responsibility and why was that important ?. `
+
+`55. What does serverless mean to you ?. `
 
 # Basic Commands 
 
