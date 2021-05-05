@@ -55,6 +55,8 @@
 
 `23. What is CIDR? `
 
+`Classless inter-domain routing (CIDR), which stands for Classless Inter-Domain Routing, is an IP addressing scheme that improves the allocation of IP addresses. It replaces the old system based on classes A, B, and C. This scheme also helped greatly extend the life of IPv4 as well as slow the growth of routing tables. `
+
 `24. What is init container? Why do we need it ?. `
 
 `25. Pod restart policies available ?. `
