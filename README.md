@@ -63,9 +63,17 @@
 
 `26. What is the use of replica set ?. `
 
+`A ReplicaSet ensures that a specified number of pod replicas are running at any given time. However, a Deployment is a higher-level concept that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features. Therefore, we recommend using Deployments instead of directly using ReplicaSets, unless you require custom update orchestration or don't require updates at all.   This actually means that you may never need to manipulate ReplicaSet objects: use a Deployment instead, and define your application in the spec section. ` 
+
 `27. What are the different storage classes ?. `
 
 `28. Diff types of EC2 instances ?. `
+ 
+ `General Purpose: The most popular; used for web servers, development environments, etc.
+  Compute Optimized: Good for compute-intensive applications such as some scientific modeling or high-performance web servers.
+  Memory Optimized: Used for anything that needs memory-intensive applications, such as real-time big data analytics, or running Hadoop or Spark.
+  Accelerated Computing: Include additional hardware (GPUs, FPGAs) to provide massive amounts of parallel processing for tasks such as graphics processing.
+  Storage Optimized: Ideal for tasks that require huge amounts of storage, specifically with sequential read-writes, such as log processing.`
 
 `29. Is it possible to edit the specifications of existing pod for modifying the resource limits ?. `
 
