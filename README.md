@@ -69,11 +69,11 @@
 
 `28. Diff types of EC2 instances ?. `
  
- `General Purpose: The most popular; used for web servers, development environments, etc.
-  Compute Optimized: Good for compute-intensive applications such as some scientific modeling or high-performance web servers.
-  Memory Optimized: Used for anything that needs memory-intensive applications, such as real-time big data analytics, or running Hadoop or Spark.
-  Accelerated Computing: Include additional hardware (GPUs, FPGAs) to provide massive amounts of parallel processing for tasks such as graphics processing.
-  Storage Optimized: Ideal for tasks that require huge amounts of storage, specifically with sequential read-writes, such as log processing.`
+  ` General Purpose: The most popular; used for web servers, development environments, etc.`
+  `Compute Optimized: Good for compute-intensive applications such as some scientific modeling or high-performance web servers. `
+  `Memory Optimized: Used for anything that needs memory-intensive applications, such as real-time big data analytics, or running Hadoop or Spark. `
+  `Accelerated Computing: Include additional hardware (GPUs, FPGAs) to provide massive amounts of parallel processing for tasks such as graphics processing. `
+  `Storage Optimized: Ideal for tasks that require huge amounts of storage, specifically with sequential read-writes, such as log processing.`
 
 `29. Is it possible to edit the specifications of existing pod for modifying the resource limits ?. `
 
