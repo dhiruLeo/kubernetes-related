@@ -100,11 +100,11 @@
   
   `bootstrap.kubernetes.io/token       - 	bootstrap token data. ` 
 
-`31. What are the different ways you can apply probes, (liveness or readiness) for a container ?. `
+`31. What are the different ways you can apply probes, (liveness or readiness) for a container ?. `  https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 
-`32. How do you change the priority of a running process ?. `
+`32. How do you change the priority of a running process ?. `   https://www.thegeekstuff.com/2013/08/nice-renice-command-examples/
 
-`33. Different taint effects ?.`
+`33. Different taint effects ?.`  https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
 
 `34. Suppose I have three nodes, one of the, I have labelled as LARGE and I want my data processing pod to go on the node which is labelled as LARGE what should be done ?. `
 
