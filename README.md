@@ -82,8 +82,8 @@
 `29. Is it possible to edit the specifications of existing pod for modifying the resource limits ?. `
 
 `30. What are the different types of secrets available in Kubernetes ?. `
-  ` https://kubernetes.io/docs/concepts/configuration/secret/ `
-
+   https://kubernetes.io/docs/concepts/configuration/secret/ 
+   
   `Opaque	arbitrary                    -  user-defined data `
   
   `kubernetes.io/service-account-token	-  service account token `
