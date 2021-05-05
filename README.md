@@ -46,9 +46,12 @@
 `20. Can I rollback a node upgrade? `
 
 `21.  What does serverless mean to you ?. `
+
  `Serverless computing is a cloud computing execution model in which the cloud provider allocates machine resources on demand, taking care of the servers on behalf of their customers.`
 
 `22. What is continuous Integration? `
+
+ `Continuous integration (CI) is the practice of automating the integration of code changes from multiple contributors into a single software project. `
 
 `23. What is CIDR? `
 
