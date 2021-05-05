@@ -70,14 +70,34 @@
 `28. Diff types of EC2 instances ?. `
  
   ` General Purpose: The most popular; used for web servers, development environments, etc.`
+  
   `Compute Optimized: Good for compute-intensive applications such as some scientific modeling or high-performance web servers. `
+  
   `Memory Optimized: Used for anything that needs memory-intensive applications, such as real-time big data analytics, or running Hadoop or Spark. `
+  
   `Accelerated Computing: Include additional hardware (GPUs, FPGAs) to provide massive amounts of parallel processing for tasks such as graphics processing. `
+  
   `Storage Optimized: Ideal for tasks that require huge amounts of storage, specifically with sequential read-writes, such as log processing.`
 
 `29. Is it possible to edit the specifications of existing pod for modifying the resource limits ?. `
 
 `30. What are the different types of secrets available in Kubernetes ?. `
+
+  `Opaque	arbitrary                    -  user-defined data `
+  
+  `kubernetes.io/service-account-token	-  service account token `
+  
+  `kubernetes.io/dockercfg             -  serialized ~/.dockercfg file `
+ 
+  `kubernetes.io/dockerconfigjson	     -  serialized ~/.docker/config.json file. `
+  
+  `kubernetes.io/basic-auth	           -  credentials for basic authentication. `
+   
+  `kubernetes.io/ssh-auth	             -  credentials for SSH authentication. `
+  
+  `kubernetes.io/tls	                  -  data for a TLS client or server. `
+  
+  `bootstrap.kubernetes.io/token       - 	bootstrap token data. ` 
 
 `31. What are the different ways you can apply probes, (liveness or readiness) for a container ?. `
 
