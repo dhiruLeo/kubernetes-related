@@ -104,6 +104,8 @@
 
 `32. How do you change the priority of a running process ?. `   https://www.thegeekstuff.com/2013/08/nice-renice-command-examples/
 
+    `In this example, test.pl is launched with a nice value of 10.  $ nice -10 perl test.pl `
+
 `33. Different taint effects ?.`  https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
 
 `34. Suppose I have three nodes, one of the, I have labelled as LARGE and I want my data processing pod to go on the node which is labelled as LARGE what should be done ?. `
