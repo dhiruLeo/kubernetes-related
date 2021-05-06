@@ -466,6 +466,4 @@ $ `usermod -aG devops krishnaprasadkv`
    
    `sudo kubectl get nodes `
    
-   
- 
 
