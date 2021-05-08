@@ -110,9 +110,9 @@
 
 `35. How does Terraform load all the plugins ?. `
 
-`36. What is VPC peering ?. `
+`36. What is VPC peering ?. `  https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html
 
-`37. What is null resource in Terraform ?. `
+`37. What is null resource in Terraform ?. ` 
 
 `38. What is the difference between provider and provisioner in Terraform ?. `
 
